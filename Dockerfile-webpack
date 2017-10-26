@@ -1,0 +1,12 @@
+FROM node:latest
+
+ADD . /code
+
+WORKDIR /code
+
+RUN npm install
+
+
+CMD ["./node_modules/.bin/webpack", "-d", "--watch"]
+
+
